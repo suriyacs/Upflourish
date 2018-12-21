@@ -1,0 +1,78 @@
+@import '../variables.scss';
+
+.search {
+	position: relative;
+	&.light {
+		color: $primary-text-color;
+		.search-box {
+			@extend .searchbar-input-style;
+			border-bottom: 1px solid rgba($color: $primary-text-color, $alpha: 0.6) !important;
+			&::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
+				color: $primary-text-color;
+				opacity: 0.6;
+			}
+		}
+	}
+
+	&.dark {
+		color: $white;
+		.search-box {
+			@extend .searchbar-input-style;
+			border-bottom: 1px solid rgba($color: $white, $alpha: 0.6) !important;
+			&::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
+				color: $white;
+				opacity: 0.6;
+			}
+		}
+	}
+
+	.searchbar-input-style {
+		border: none;
+		outline: none;
+		color: inherit;
+		font-size: 1rem;
+		line-height: 1.5;
+		position: relative;
+		display: inline-block;
+		background-clip: padding-box;
+		background-color: transparent;
+		transition: padding-left 0.5s, width 0.3s;
+		&.show-icon {
+			width: 100% !important;
+			padding: 0.375rem 0.75rem !important;
+		}
+		&.hide-icon {
+			width: 0% !important;
+			padding: 0.375rem 0rem !important;
+		}
+	}
+
+	.searchbar-icons {
+		top: 10px;
+		margin: 0;
+		opacity: 0.7;
+		outline: none;
+		cursor: pointer;
+		position: absolute;
+		display: inline-block;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.close-icon {
+		@extend .searchbar-icons;
+		right: 90%; //don't change or suffle these lines
+		-webkit-transition: right 0.5s, width 0.3s; //don't change or suffle these lines
+		transition: right 0.5s, width 0.2s;  //don't change or suffle these lines
+		right: 5%;  //don't change or suffle these lines
+	}
+
+	.search-icon {
+		@extend .searchbar-icons;
+		right: 5%; //don't change or suffle these lines
+		-webkit-transition: right 0.5s, width 0.3s; //don't change or suffle these lines
+		transition: right 0.5s, width 0.3s; //don't change or suffle these lines
+		right: 90%; //don't change or suffle these lines
+	}
+}

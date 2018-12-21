@@ -1,0 +1,243 @@
+@import '../variables.scss';
+
+@mixin height-width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+.create-btn {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background: $box-shadow-light;
+  width: 100px;
+  margin-top: 10px;
+  color: $primary-text-color;
+}
+
+.edit-btn, .action-btn {
+  float: right;
+  @include height-width(40px, 70px);
+  border-radius: 4px;
+  border: solid 1px $secondary-btn-color;
+  background-color: transparent;
+  color: $secondary-btn-color;
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.action-btn {
+  color: $secondary-btn-color;
+  width: 200px;
+}
+
+.assessment-intro-card {
+  border-radius: 2px;
+  background-color: $white;
+  padding: 20px;
+  .title {
+    display: inline-block;
+    font-size: 22px;
+    color: $thin-black;
+    line-height: normal;
+    .complete-btn {
+      max-width: 140px;
+    }
+  }
+}
+
+.question-card {
+  margin-top: 20px;
+  border-radius: 2px;
+  background-color: $white;
+  padding: 20px;
+  .answer-choices {
+    margin-top: 20px;
+    font-size: 18px;
+    color: $subtle-text;
+    line-height: normal;
+  }
+}
+
+.add-question {
+  margin-top: 55px;
+  padding: 15px;
+  cursor: pointer;
+  border: 2px dashed $border-color;
+  i {
+    font-size: 20px;
+  }
+  .add-question-container {
+    color: $subtle-text;
+  }
+}
+
+.question-header {
+  color: $subtle-text;
+}
+
+.custom-check {
+  @include height-width(20px, 20px);
+  margin: 0px;
+}
+
+@mixin answer($bg-clr, $bo-clr, $text-clr) {
+  padding: 10px;
+  border-radius: 17.5px;
+  background-color: $bg-clr;
+  margin: 10px 0px;
+  i {
+    color: $bo-clr;
+  }
+  color: $text-clr;
+}
+
+.wrong-answer {
+  @include answer($app-background, $border-color, $subtle-text);
+}
+
+.correct-answer {
+  @include answer($correct-answer-bg, $primary-btn, $subtle-text);
+  .right-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+}
+
+.fa-minus-circle {
+  color: $error-color !important;
+  cursor: pointer;
+}
+
+.fa-pencil-square-o {
+  color: $black !important;
+  cursor: pointer;
+}
+
+.btn-container {
+  margin-top: 20px;
+  .save-btn {
+    float: right;
+    @include height-width(40px, 200px);
+    border-radius: 4px;
+    border: 0;
+    background-color: transparent;
+    color: $white;
+    font-size: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background-color: $primary-btn;
+    margin-left: 20px;
+  }
+}
+
+.question-list {
+  list-style: none;
+  margin-top: 15px;
+  .question {
+    padding: 20px;
+    background-color: $gradient-blue;
+    cursor: pointer;
+    color: $white;
+    border-bottom: 1px solid $border-color;
+    border-radius: 4px;
+  }
+}
+
+.related-contents {
+  list-style: none;
+  margin-top: 15px;
+  .content {
+    padding: 10px;
+    background-color: $white;
+    box-shadow: 0 6px 8px 0 $box-shadow-light;
+    cursor: pointer;
+    margin: 10px;
+  }
+  .selected-content {
+    border: 1px solid $primary-btn;
+    .fa-check-circle {
+      color: $primary-btn;
+    }
+  }
+}
+
+.content-modal-bg {
+  background-color: $app-background;
+}
+
+.save-content {
+  float: right;
+  @include height-width(40px, 200px);
+  border-radius: 4px;
+  border: 0;
+  background-color: transparent;
+  color: $white;
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background-color: $primary-btn;
+  margin-left: 20px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.related-content-container {
+  cursor: pointer;
+  .content-img {
+    @include height-width(100px, 150px);
+  }
+  .content-title {
+    margin-top: 10px;
+  }
+}
+
+.custom-header {
+  .close {
+    position: relative;
+    background-color: $white !important;
+    border: none !important;
+    top: 5px;
+  }
+}
+
+.related-contents-container {
+  .title {
+    font-size: 22px;
+    color: $thin-black;
+    line-height: normal;
+    margin-top: 10px;
+  }
+  .related-contents {
+    list-style: none;    
+    .no-related-content {
+      text-align: center;
+      padding: 30px;
+      color: $secondary-text-color;
+    }
+    .content {
+      background-color: $white;
+      box-shadow: 0 6px 8px 0 $box-shadow-light;
+      margin: 5px 0px;
+      .content-title {
+        margin: 5px;
+        color: $primary-text-color;
+      }
+      .content-img {
+        @include height-width(80px, 80px);
+      }
+      .trash {
+        cursor: pointer;
+        color: $error-color !important;
+        font-size: 20px;
+      }
+    }    
+  }
+}

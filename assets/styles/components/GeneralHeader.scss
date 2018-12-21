@@ -1,0 +1,104 @@
+@import '../variables.scss';
+
+.transparent-header {
+  background-color: $transparent !important;
+  padding-top: 20px;
+}
+.content-view {
+  min-width: calc(100% - 280px);
+}
+.general-header {
+  background-color: $background-color;
+  position: fixed;
+  width: 100%;
+  z-index: 1040;
+  // max-width: 1550px;
+  #navbarHeaderContent {
+    display: none;
+  }
+  .collapse.show {
+    display: block !important;
+  }
+  .landing-content{
+    z-index: 1;
+    width: 100%;
+    padding: 0px 30px;
+  }
+  .app-header{
+    color: $white;
+    font-size: 32px;
+    padding-left: 35px;
+    text-decoration: none;
+  }
+  .header-content {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a:hover {
+      text-decoration: none;
+    }
+    .dropdown {
+      list-style: none;
+      color: $white;
+      &:hover>.dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .dropdown-menu {
+        display: none;
+      }
+    }
+    .dropdown>.dropdown-open:active {
+      pointer-events: none;
+    }
+    .search-course {
+      width: 320px;
+    }
+  }
+  .header-btns{
+    display: inherit;
+    list-style: none;
+    font-size: 15px;
+    li{
+      padding: 10px 0px;
+      color: $white;
+      line-height: 45px;
+      margin: 0px 15px;
+    }
+    .signin-btn, .signup-btn{
+      background-color: $gray-color;
+      border: solid 1px $border-gray;
+      color: $white;
+      padding: 10px 20px;
+    }
+    .signup-btn {
+      background-color: $secondary-btn-color;
+      border: solid 1px $secondary-btn-color;
+    }
+  }
+  .content{
+    padding: 30px 60px 0px 60px;
+    max-width: 600px;
+    color: $white;
+    min-height: 500px;
+    .job-title{
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1.12;
+    }
+    p{
+      opacity: 0.8;
+      line-height: 1.47;
+      font-size: 19px;
+    }
+    .search-icon{
+      height: 20px;
+      position: relative;
+      display: block;
+      bottom: 30px;
+      float: right;
+      right: 15px;
+    }
+  }
+}

@@ -1,0 +1,234 @@
+@import '../variables.scss';
+
+@mixin default-placeholder() {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: $placeholder-color;
+}
+
+@mixin default-font-styles() {
+	font-weight: normal;
+	letter-spacing: normal;
+}
+
+.form-signin {
+	background-color: $white;
+	max-width: 500px;
+	padding: 15px;
+	margin: 0 auto;
+	font-size: 14px;
+	.form-signin-heading {
+		margin-bottom: 10px;
+	}
+	.checkbox {
+		margin-bottom: 10px;
+		font-weight: normal;
+	}
+	.form-control {
+		position: relative;
+		font-size: 16px;
+		height: auto;
+		padding: 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		&:focus {
+			z-index: 2;
+		}
+	}
+	.field-placeholder::placeholder {
+		@include default-placeholder();
+	}
+	.field-placeholder:-ms-input-placeholder {
+		@include default-placeholder();
+	}
+
+	.form-align-fields {
+		margin-top: 1rem;
+	}
+  input {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: $secondary-btn-color;
+    }
+    border-color: $border-color;
+  }
+  label {
+    margin-bottom: 0;
+  }
+	input[type="text"] {
+		margin-bottom: -1px;
+	}
+	input[type="password"] {
+		margin-bottom: 10px;
+  }
+}
+.login{
+	padding: 10px;
+}
+.account-wall {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: $white;
+  border-radius: 4px;
+  .login-header {
+		@include default-font-styles();
+		font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    color: $header-text-color;
+		text-align: center;
+		padding-top: 20px;
+	}
+	.login-subheader {
+		@include default-font-styles();
+		font-size: 15px;
+    line-height: 20px;
+		line-height: 1.33;
+    color: $placeholder-color;
+    padding: 15px 0px 15px 0px;
+	}
+	.invalid-credential{
+		max-width: 500px;
+    margin: 0px 15px;
+    border: 1px solid $error-color_1;
+    border-radius: 4px;
+    padding: 7px;
+		background-color: rgba(255, 73, 72, 0.07);
+		font-size: 14px;
+    text-align: center;
+	}
+	.reset-pwd-instruction{
+		text-align: center;
+		color: $instruction_color;
+		font-size: 14px;
+	}
+}
+.loginForm {
+	min-height: calc(100vh - 600px);
+	margin: auto;
+	.application-name{
+		color: $white;
+		font-size: 26px;
+		text-align: center;
+	}
+	.forgot-pwd {
+		padding: 10px 15px;
+	}
+}
+.profile-img {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.need-help {
+	margin-top: 10px;
+}
+.new-account {
+	display: block;
+	margin-top: 10px;
+}
+
+.contact-sales {
+	margin: 20px 0px;
+	font-size: 14px;
+	text-align: center;
+	color: $primary-text-color;
+	.error {
+		color: $error-color;
+	}
+}
+.find-more {
+  margin: 0 auto;
+  .find-more-txt {
+    color: $white;
+  }
+  .find-more-image {
+    width: 100%;
+  }
+  .find-more-btn {
+    margin: 0 auto;
+    width: 150px;
+    margin-top: 5%;
+    button {
+      background-color: $secondary-btn-color;
+    }
+  }
+}
+
+.login-input-field {
+	margin: 25px 0px 5px 0px;
+	color: $secondary-text-color;
+	display: flex;
+}
+.token-expire {
+	text-align: center;
+}
+.login-background {
+	background-color: $background-color;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.social-media-btns{
+	background-color: $white;
+	padding: 15px 0px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+.facebook-btn{
+	background-color: $facebook-btn;
+	color: $white;
+	width: 100%;
+	padding: 10px !important;
+}
+.gmail-btn{
+	color: $white;
+	background-color: $gmail-btn;
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 10px !important;
+}
+.linked-btn{
+	color: $white;
+	background-color: $linkedin-btn-color;
+	margin-bottom: 10px;
+	width: 100%;
+	padding: 10px !important;
+}
+
+@media only screen and (max-width: 767px) {
+	.login-background {
+		.row {
+			flex-direction: column-reverse;
+		}
+		.bottom-spacing {
+			margin-bottom: 15px;
+		}
+		.vertical-align {
+			flex-direction: column !important;
+		}
+	}
+}
+.back-to-login {
+	color: $secondary-btn-color;
+	display: flex;
+	span{
+  	&:hover{
+      text-decoration: underline;
+		}
+	}
+	.left-angle {
+		font-size: 25px;
+	}
+}

@@ -1,0 +1,81 @@
+@import "../variables.scss";
+
+.reward-container {
+  margin: 0 auto;
+  max-width: 400px;
+  color: $secondary-text-color;
+  .reward-header {
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0;
+    font-size: 24px;
+    color: $primary-text-color;
+  }
+  .reward-image-container {
+    height: 240px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 14px 30px 0 rgba(40, 66, 85, 0.3);
+    background: linear-gradient(171deg, #e3006e, #7f00fd);
+    .reward-image {
+      height: 45%;
+    }
+    .reward-text {
+      margin: 0 auto;
+      color: $white;
+      min-width: 200px;
+      text-align: center;
+      width: min-content;
+      .reward-value {
+        padding: 5px;
+        font-size: 26px;
+        font-weight: 400;
+      }
+      .tag {
+        padding: 5px;
+        font-style: italic;
+      }
+    }
+  }
+  .reward-tag {
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+  }
+  .reward-calender {
+    padding: 10px;
+    text-align: center;
+    .day-div {
+      padding: 2.5px;
+      display: inline-block;
+      .reward-flag {
+        width: 35px;
+        height: 6px;
+        background-color: $progress-color;
+      }
+      .day-name {
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  }
+  .reward-button-container {
+    margin: 20px 0;
+    .cancel-button {
+      width: 110px;
+      font-size: 15px;
+      color: $secondary-text-color;
+      margin: 15px 5px;
+      display: inline-block;
+      border: 1px solid $secondary-text-color;
+      background-color: transparent;
+    }
+    .thank-button {
+      width: 270px;
+      font-size: 15px;
+      margin: 15px 5px;
+      display: inline-block;
+    }
+  }
+}

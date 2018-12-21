@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.content-view {
+  min-width: calc(100% - 280px);
+}
+.complete-profile {
+  color: $white;
+  .title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  p {
+    opacity: 0.7;
+    font-size: 16px;
+    line-height: 1.44;
+  }
+  .complete-profile-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .complete-profile-btn {
+      background-color: $white;
+      color: $secondary-btn-color;
+      font-weight: bold;
+    }
+  }
+}
+.recommended-career-track,
+.recommended-skill-track,
+.recommended-microlearning-track,
+.featured-learning-options {
+  .title {
+    font-size: 22px;
+    font-weight: 500;
+    color: $thin-black;
+  }
+  p {
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.53;
+    color: $subtle-text;
+  }
+}
+.featured-learning-options {
+  .nav-item {
+    font-size: 15px;
+    color: $subtle-text;
+  }
+  .active-tab {
+    border-bottom: 3px solid $secondary-btn-color !important;
+    color: $secondary-btn-color !important;
+  }
+  .nav-link:focus, .nav-link:hover {
+    border-color: $transparent;
+  }
+  .featured-skills {
+    min-height: 305px;
+  }
+}

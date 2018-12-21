@@ -1,0 +1,37 @@
+@import '../variables.scss';
+.search-course {
+  .select-wrapper {
+    position: relative;
+    .search-icon{
+      height: 18px;
+      position: absolute;
+      display: block;
+      top: 8px;
+      left: 15px;
+    }
+    .Select-control {
+      background-color: rgba(255, 255, 255, 0.07) !important;
+      border: none;
+      .Select-placeholder {
+        padding-left: 40px;
+      }
+      .Select-value {
+        padding-left: 40px;
+        .Select-value-label {
+          color: $white !important;
+        }
+      }
+      .Select-input {
+        input {
+          background-color: unset;
+          color: $white;
+          padding-left: 30px;
+          &::placeholder{
+            opacity: 0.6;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}

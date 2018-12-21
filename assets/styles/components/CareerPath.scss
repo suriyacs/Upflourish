@@ -1,0 +1,22 @@
+@import '../variables.scss';
+
+.careerPath-details {
+  .skill-track {
+    .skill-track-sections {
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0px 0px 15px 5px $box-shadow-light;
+      .section-name {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.22;
+        color: $thin-black;
+      }
+      .section-description {
+        font-size: 15px;
+        line-height: 1.47;
+        color: $subtle-text;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.form-online-course {
+  background-color: $white;
+  max-width: 450px;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+.upload-image{
+    text-align: center;
+    border: 1px dashed $border-color;
+    padding: 20px;
+}
+.DragnDropDP{
+  height: 130px;
+}
+.duration{
+  position: absolute;
+  right: 0px;
+  width: 35%;
+  padding: 0.460rem 0.75rem;
+  background-color: #f4f5f7;
+  border: 1px solid $border-color;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.duration-hours{
+  width: 100%;
+}
+.duration-minutes{
+  width: 100%;
+}

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+$primary-font: 'Lato', sans-serif !important;
+
+// text
+$primary-text-color : #022550;
+$secondary-text-color: #657383;
+$subtle-text: #6F7E99;
+
+// button
+$primary-btn: #02b875;
+$secondary-btn-color: #0064dc;
+$dark-btn-color: #021627;
+
+// error
+$error-color: #FF5766;
+$error-color_1: #ff4948;
+
+// background
+$app-background: #f2f5fa;
+$background-color: #1c2833;
+$background-color_1: rgba(37, 56, 88, 0.9);
+$black-bg: #172332;
+$gray-bg: #212032;
+$card-bg-color: #282339;
+
+// shadow
+$box-shadow-light: rgba(189, 208, 223, 0.6);
+$box-shadow-dark: rgba(37, 56, 88, 0.8);
+$shadow-green: #041531;
+$active-playlist-color: rgba(31, 154, 255, 0.06);
+$pagination-box-shadow: rgba(94, 108, 132, 0.3);
+$box-shadow: inset 0 1.5px 3px 0 rgba(0,0,0,.15), 0 1.5px 3px 0 rgba(0,0,0,.15);
+
+//colors
+$white: #ffffff;
+$black: #000000;
+$transparent: transparent;
+$border-color: #d7dee8;
+$light-blue-color: #1974da;
+$dark-blue-color: #4e3ad8;
+$thin-blue: #2A4271;
+$thin-black: #414a5f;
+$linkedin-btn: #0077b7;
+$link-facebook-btn: #475993;
+$link-gmail-btn: #dc4e41;
+$black-with-lite-blue: #6f7e99;
+$light-gray-color: #B8BABC;
+
+// additional
+$profile-nav-tab-inactive: #253858;
+$profile-email-color: rgba(101, 115, 131, 0.6);
+$profile-password-color: rgba(94, 108, 132, 0.7);
+$gradient-pink: #3a00a7;
+$gradient-blue: #1375db;
+$footer-border-color: #979797;
+$instruction_color: #7b8599;
+$profile-content-font: #5e6c84;
+$header-text-color: #1b2733;
+$placeholder-color: $secondary-text-color;
+$header-color:#070430;
+$progress-color: #f8e71c;
+$default-progress: #eaecf0;
+$light-orange: #f5a623;
+$points-color: #dee2e6;
+$arrow-color:#AFB3C1;
+$role-font-color: #494949;
+$button-hover: #BFDEFF;
+$slide-arrow-color: #2249c7;
+$review-count-color: #70808d;
+$report-abouse-color: #3a7dfe;
+$light-black: #6A7382;
+$drop-section-subtitle: #94A2B4;
+$upload-resume-bgcolor: #f0fbf7;
+$light-green: #86DAB9;
+$dark-blue: #031b4e;
+$profile-popup-border: #e8dfdf;
+$facebook-btn: #4e69a2;
+$gmail-btn: #dd5347;
+$linkedin-btn-color: #0073b1;
+
+// goal progress color
+$day1: #faf55c;
+$day2: #fadf5c;
+$day3: #f7c947;
+$day4: #f2a64c;
+$day5: #f79c4b;
+$day6: #f78434;
+$day7: #f57d28;
+
+$section-header-color: rgba(255, 255, 255, 0.1);
+$inactive-button-color: rgba(255, 255, 255, 0.15);
+$gray-color: rgba(255, 255, 255, 0.05);
+$border-gray: rgba(255, 255, 255, 0.6);
+$lite-black: rgba(255, 255, 255, 0.12);
+$info-section-shadow: rgba(189, 208, 223, 0.3);
+$slide-shadow: rgba(0, 0, 0, 0.3);
+$progress-bar-inactive: rgba(215, 222, 232, 0.6);
+$review-section-border: rgba(94, 108, 132, 0.6);
+$profile-photo-background: rgba(243,246,248,.94);
+$profile-tab-shadow: rgba(111, 126, 153, 0.5);
+$correct-answer-bg: rgba(2, 184, 117, 0.2);
+$gold-background: #fe9825;
+$thin-gold-color: #FFCB34;
+
+// gradient
+$nav-blue: linear-gradient(352deg, $dark-blue-color, $light-blue-color);
+$overview-Background: linear-gradient(to top, #27304b, #293449);
+$career-impact-image: linear-gradient(173deg, $gradient-pink, $gradient-blue);
+$limitless-section-background: linear-gradient(to bottom, $gradient-pink, $gradient-blue);
+$view-all-reviews-left-border: linear-gradient(to right, rgba(94, 108, 132, 0), rgba(94, 108, 132, 0.8));
+$view-all-reviews-right-border: linear-gradient(to left, rgba(94, 108, 132, 0), rgba(94, 108, 132, 0.8));
+$gradient-thin-blue: linear-gradient(175deg, #3a00a7, #1375db);
+$black-shadow: rgba(0, 0, 0, 0.4);
+$related-content-box-shadow: rgba(189, 208, 223, 0.5);
+
+%textStyles {
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	font-style: normal;
+}
+
+@mixin expandableContent($height) {
+  .expand {
+    &.content-expand {
+      color: $thin-black !important;
+    }
+    color: $white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+    padding: 5px 0px 10px;
+  }
+  .expand.collapsed:after  {
+    content: '+ Read more';
+  }
+  .expand:not(.collapsed):after {
+    content: '- Read less';
+  }
+  p.collapse[aria-expanded="false"] {
+    height: $height;
+    overflow: hidden;
+    display: -webkit-box;
+  }
+  p.collapsing[aria-expanded="false"] {
+    height: $height;
+  }
+  p.show {
+    height: 100% !important;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif !important;
+  height: 100vh;
+}
+#app{
+  min-height: 100vh;
+  height: 100%;
+  background-color: $app-background;
+}
+
+.container {
+  max-width: 100%;
+}

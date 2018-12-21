@@ -1,0 +1,116 @@
+@import '../variables.scss';
+
+.custom-grid {
+  margin-bottom: 50px; 
+  .paddingLeft {
+    padding-left: 20px;
+  }
+  .plr-15 {
+    padding: 0px 15px;
+  }
+  .marignLeft20 {
+    margin-left: 20px;
+  }
+  .marignRight20 {
+  	margin-right: 20px;
+  }
+  .separator {
+    border-right: 2px solid $profile-email-color;
+    margin-left: 20px;
+  }
+  .search {
+    margin-left: 20px;
+  }
+  .inviteButton {
+    border-radius: 4px;
+    background-color: $primary-btn;
+    border: none;
+    color: $white;
+    font-size: 15px;
+  }
+  .cardView {
+    &:last-child {
+      border-bottom: none;
+    }
+    border-bottom: 1px solid $border-color;
+    border-radius: 2px;
+    padding: 10px 8px;
+    .user {
+      .name {
+        margin-left: 10px;
+        position: absolute;
+        color: $header-text-color;
+        font-size: 17px;
+        .email {
+          color: $placeholder-color;
+          font-size: 14px;
+        }
+      }
+    }
+    .content {
+      color: $placeholder-color;
+      font-size: 15px;
+      .count, i {
+        color: $secondary-btn-color
+      }
+    }
+    .adminRole {
+      color: $header-text-color;
+      font-size: 15px;
+      padding: 5px 0;
+    }
+		.Select-control {
+      opacity: 0.6;
+      border-radius: 2px;
+      border: solid 1px $border-color;
+    }
+    i {
+      color: $secondary-text-color
+    }
+    .actionButton {
+      .revoke {
+        &::after {
+          content: ' | ';
+          color: $placeholder-color;
+          cursor: auto;
+        }
+      }
+      span {
+        font-size: 15px;
+        color: $secondary-btn-color;
+      }
+    }
+  }
+}
+#innerContent {
+	background-color: $background-color_1;
+	height: 100%;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+	transition: opacity .5s;
+	display: none;
+	p {
+		color: $white;
+		text-align: right;
+	}
+	.confirm-btn {
+		background-color: $error-color_1;
+		color: $white;
+		border-radius: 2px;
+		padding: .1rem 1.5rem;
+	}
+	.cancel-btn {
+		background-color: $transparent;
+		border: 1px solid $white;
+		color: $white;
+		border-radius: 2px;
+		padding: .1rem 1rem;
+	}
+	&.isDelete {
+		opacity: .9 !important;
+		transition: opacity .5s !important;
+		display: block !important;
+	}
+}

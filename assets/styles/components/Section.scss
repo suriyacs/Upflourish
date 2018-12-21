@@ -1,0 +1,114 @@
+@import '../variables.scss';
+
+.form-section{
+    background-color: $white;
+    max-width: 450px;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid $border-color !important;
+    border-radius: 20px;
+    background-color: $border-color !important;
+}
+.delete-section-container{
+    background-color: $white;
+    padding: 40px;
+    margin: 0 auto;
+    font-size: 14px;
+    border-radius: 4px;
+    .delete-section-title{
+        font-size: 24px;
+        padding: 0px 15px 15px 15px;
+        color: $primary-text-color;
+        text-align: center;
+    }
+    .deleted-section-content1{
+        padding: 5px 15px;
+        font-size: 15px;
+        color: $secondary-text-color;
+    }
+    .deleted-section-content2{
+        padding: 15px;
+        font-size: 15px;
+        color: $secondary-text-color;
+    }
+    .btn{
+        margin-top: 15px;
+    }
+    .btn-default{
+        background-color: $white;
+        border:1px solid $border-color;
+        color: $secondary-text-color;
+    }
+}
+.btn-edit {
+    color: $secondary-btn-color !important;
+    border: 1px solid $secondary-btn-color !important;
+    background-color: $white !important;
+}
+.constent-order-div{
+    padding: 0px;
+}
+.content-detail-image{
+    padding: 0px;
+    border: 1px solid $border-color;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: $white;
+    img{
+      height: 150px;
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+}
+.content-detail-content{
+    font-weight: normal;
+    padding: 10px 0px;
+    font-size: 15px;
+    color: $secondary-text-color;
+    padding: 10px 10px 0px;
+}
+.content-detail{
+    padding:20px;
+    font-size: 17px;
+    border: 1px solid $border-color;
+    font-weight: 500;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $white;
+}
+
+.count-and-search {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	.learning-path-count {
+		color: $secondary-text-color;
+	}
+	.splitter {
+		margin: 0 20px;
+		width: 2px;
+		background-color: $secondary-text-color;
+		height: 90%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.learningpath-search {
+		flex-grow: 2;
+		vertical-align: middle;
+		z-index: 0;
+		display: inline-block;
+		max-width: 50%;
+		.form-control{
+			border-radius: 7px !important;
+		}
+	}
+}

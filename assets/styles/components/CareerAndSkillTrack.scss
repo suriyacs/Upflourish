@@ -1,0 +1,28 @@
+@import '../variables.scss';
+
+.custom-dropdown{
+  min-width: 945px !important;
+  right: auto;
+  top: 40px;
+  .title{
+    color: $profile-nav-tab-inactive;
+  }
+  .see-all{
+    color: $secondary-text-color;
+    background-color: $app-background;
+    padding: 0 .5rem;
+    border-radius: 50px;
+  }
+  .item-content{
+    color: $secondary-text-color;
+    font-size: 14px;
+  }
+  .right-arrow{
+    float: right;
+    font-size: 25px;
+  }
+  .right-icon{
+    color: $border-color;
+    margin-left: 5px;
+  }
+}

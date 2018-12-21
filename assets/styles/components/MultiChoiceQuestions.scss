@@ -1,0 +1,78 @@
+@import '../variables.scss';
+
+.questions-form-section {
+  ul {
+    list-style-type: none;
+  }
+  .questionSection {
+  	border-radius: 2px;
+  	border: 1px solid $border-color;
+  	box-shadow: 0 6px 8px 0 rgba(189, 208, 223, 0.5);
+  	padding: 20px;
+  	margin-top: 20px;
+    clear: both;
+    .actionIcon {
+    	padding: 0px 5px;
+    	border-radius: 100%;
+    }
+    .bo-add-color {
+      border: 2px dotted #007bff;
+    }
+    .bo-delete-color {
+      border: 2px dotted $error-color_1;
+    }
+    .fa {
+      margin: 0;
+    }
+    .add {
+      color: #007bff;
+    }
+    .delete {
+      color: $error-color_1;
+    }
+    .answerSection {
+      clear: both;
+    }
+  }
+}
+.remove-btn {
+  background-color: $error-color;
+}
+
+.delete-field {
+  position: relative;
+  width: 38px !important;
+  text-align: center;
+  height: 38px;
+  float: right;
+  i {
+    text-align: center;
+  }
+}
+
+.ques-delete {
+  top: 9px;
+}
+
+.ques-add {
+  top: -35px;
+}
+
+.ans-delete {
+  top: -4px;
+}
+
+.ans-add {
+	top: -49px;
+}
+
+.add-btn {
+  width: 135px !important;
+  margin: 15px 0;
+}
+
+.submit-btn {
+  width: 150px !important;
+  margin: 0 auto !important;
+  margin-bottom: 10px;
+}

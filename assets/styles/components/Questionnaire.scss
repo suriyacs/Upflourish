@@ -1,0 +1,92 @@
+@import '../variables.scss';
+
+.assessment-container {
+  padding-bottom: 20px !important;
+  label {
+    display: block;
+    padding-left: 10px;
+  }
+  input[type=radio] {
+  	position: relative;
+  	top: 5px;
+  	margin-right: 10px;
+  }
+  .learner-question-section {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+    box-shadow: 0 6px 8px 0 $box-shadow-light;
+    background-color: $white;
+    .question-num {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .question-text {
+      padding-left: 10px;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    label {
+      width: max-content;
+    }
+  }
+  .submit-answer {
+    width: 150px;
+    margin: 0 auto;
+  }
+  .breadcrumb-container {
+    padding: 20px 0 0 20px;
+  }
+}
+.result-section {
+  padding: 15px 17px;
+  border-radius: 2px;
+  border: 1px solid $border-color;
+  box-shadow: 0 6px 8px 0 $box-shadow-light;
+  .result-progress {
+    .progress {
+      background-color: $link-gmail-btn;
+      max-height: 25px;
+      .progress-bar {
+        background-color: $primary-btn !important;
+        max-height: 25px;
+      }
+    }
+  }
+}
+.answered-question {
+  position: sticky !important;
+  top: .4rem;
+  max-height: calc(100vh - 0.8rem);
+  overflow-y: auto;
+  order: 2;
+  padding-bottom: 1.5rem;
+  border: none;
+  .body {
+    padding: 15px 17px;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+    box-shadow: 0 6px 8px 0 $box-shadow-light;
+    .square {
+      min-height: 35px;
+      min-width: 40px;
+      border: 1px solid $border-color;
+      border-radius: 2px;
+      text-align: center;
+      &.active {
+        color: $white;
+        background-color: $linkedin-btn;
+      }
+      &.attended {
+        color: $white;
+        background-color: $primary-btn;
+      }
+      &.missed {
+        color: $white;
+        background-color: $link-gmail-btn;
+      }
+    }
+  }
+}

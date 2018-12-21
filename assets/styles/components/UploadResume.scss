@@ -1,0 +1,127 @@
+@import '../variables.scss';
+
+@mixin default-title {
+  font-size: 20px;
+  color: $gray-bg;
+}
+
+@mixin default-sub-title {
+  font-size: 14px;
+  line-height: 1.19;
+  color: $subtle-text;
+}
+
+.upload-section {
+  background-color: $white;
+  min-height: calc(100vh - 18px);
+  .header {
+    .steps-font {
+      font-size: 15px;
+      color: $subtle-text;
+    }
+    .skip-font {
+      font-size: 15px;
+      color: $secondary-btn-color;
+    }
+    .not-recommend {
+      font-size: 14px;
+      color: $subtle-text;
+      font-style: italic;
+    }
+  }
+  .steps-progress {
+    max-width: 300px;
+    min-height: 7px;
+    .progress-bar {
+      min-height: 7px;
+    }
+  }
+  .body {
+    background-color: $app-background;
+    min-height: calc(100vh - 80px);
+    .profile-png {
+      width: 70px;
+      height: 70px;
+      position: relative;
+      bottom: 35px;
+    }
+    .title {
+      font-size: 22px;
+      line-height: 1.27;
+      color: $gray-bg;
+      text-align: center;
+      margin: auto;
+    }
+    .content {
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0 6px 8px 0 $box-shadow-light;
+      .proceed-btn {
+        min-height: 44px;
+        border-radius: 4px;
+        border: solid 1px $secondary-btn-color;
+        background-color: $secondary-btn-color;
+        font-size: 15px;
+        color: $white;
+        font-weight: 600;
+        .right-angle {
+          font-size: 18px;
+        }
+      }
+      .upload-resume {
+        .upload-resume-title {
+          @include default-title;
+        }
+        .upload-resume-description {
+          @include default-sub-title;
+        }
+        .drop-section {
+          background-color: $upload-resume-bgcolor;
+          .title {
+            color: $light-black;
+            font-size: 16px;
+            &.dropped-file {
+              font-size: 17px;
+            }
+          }
+          .sub-title {
+            color: $drop-section-subtitle;
+            font-size: 14px;
+            font-style: italic; 
+          }
+          .dotted-line {
+            border: 2px solid $light-green;
+            border-style: dashed;
+            border-radius: 4px;
+            .upload-btn {
+              min-width: 200px;
+              background-color: $primary-btn;
+              color: $white;
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .skill-section {
+        .upload-resume-title {
+          @include default-title;
+        }
+        .upload-resume-description {
+          @include default-sub-title;
+        }
+        .atleast-font {
+          font-size: 14px;
+          color: $subtle-text;
+          font-style: italic;
+        }
+        .skill-search-section {
+          .Select-control {
+            border-radius: 4px;
+            border: solid 1px $border-color;
+          }
+        }
+      }
+    }
+  }
+}

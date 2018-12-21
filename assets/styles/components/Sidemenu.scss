@@ -1,0 +1,204 @@
+@import '../variables.scss';
+
+@mixin default-learningpath-styles() {
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@mixin default-font-styles {
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin default-style {
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin default-spacing {
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+@mixin horizontal-spacing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin center-items {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin active {
+  border-radius: 4px;
+  background-color: $secondary-btn-color;
+  color: $white !important;
+}
+
+.category-sidemenu {
+  max-width:280px;
+  min-height: calc(100vh - 70px);
+  background-color: $app-background;
+  border-right: 1px solid $border-color;
+  padding: 20px;
+  .menu-btn {
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .active {
+    color: $white;
+    background-color: $secondary-btn-color;
+  }
+  .in-active {
+    color: $black-with-lite-blue;
+  }
+}
+.sidemenu {
+  border-right: 1px solid $border-color;
+  min-height: calc(100vh - 70px);
+  background-color: $white;
+  transition: 0.4s;
+  position: sticky;
+  z-index: 99;
+  width: 100%;
+  top: 70px;
+  .default-filter {
+    background-color: $app-background;
+  }
+  .card {
+    color: $thin-black;
+    border: none;
+    border-right: none;
+  }
+  .card-header {
+    background-color: $white;
+    border-bottom: 1px solid $border-color;
+    .collapseable{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .active {
+     @include active;
+    }
+  }
+  .card-body {
+    padding: .5rem 1.25rem;
+    background-color: $app-background;
+    .card-body-inner {
+      padding-left: 18px !important;
+      &:hover, &:focus {
+        color: $secondary-btn-color;
+      }
+    }
+    .active {
+      @include active;
+     }
+  }
+}
+
+.learner-section-side-nav {
+  background-image: $nav-blue;
+  min-height: calc(100vh - 70px);
+  max-width: 360px;
+  .back-button {
+    height: 60px;
+    padding: 15px 15px 15px 40px;
+    background-color: $section-header-color;
+    .back-icon {
+      height: 25px;
+    }
+    .left-angle {
+      color: $border-color;
+      font-size: 20px;
+    }
+    .back-btn-text {
+      font-size: 16px;
+      color: $white;
+      @include default-learningpath-styles();
+    }
+  }
+  .header {
+    color: $white;
+    .title {
+      @include default-style;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .description {
+      opacity: 0.6;
+      font-family: $primary-font;
+      font-size: 15px;
+      line-height: 1.53;
+      padding: 10px 0px 0px 0px;
+      letter-spacing: normal;
+      @include default-learningpath-styles();
+    }
+  }
+  .chart-section {
+    background-color: $thin-blue;
+    margin: 35px 20px;
+    border-radius: 4px;
+    .header-section {
+      color: $white;
+      @include default-style;
+      .title {
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .subtitle {
+        opacity: 0.7;
+        font-family: $primary-font;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .synopsis-btn {
+    width: 100%;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 0px;
+    font-size: 15px;
+    &:hover{
+      background: $white !important;
+      color: $secondary-btn-color !important;
+    }
+  }
+  .author-section {
+    color: $white;
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .image {
+      height: 70px;
+      border-radius: 50%;
+      width: 70px;
+    }
+    .common-header-text {
+      font-size: 18px;
+      @extend %textStyles;
+      &.font-weight-500 {
+        font-weight: 500;
+      }
+    }
+    .f-s-15 {
+      font-size: 15px;
+    }
+    .common-content-text {
+      opacity: 0.6;
+      @extend %textStyles;
+    }
+  }
+}

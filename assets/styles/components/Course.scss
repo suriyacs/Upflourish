@@ -1,0 +1,560 @@
+@import '../variables.scss';
+
+@mixin font($size, $weigth) {
+  font-size: $size;
+  font-weight: $weigth;
+}
+.course-landing-page {
+  .profile-image {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .heading {
+    font-size: 32px;
+    color: $profile-nav-tab-inactive;
+  }
+  .top-section {
+    .overview-secion {
+      width: 100%;
+      background-image: $overview-Background;
+      .nav-bar-section {
+        .bg-light {
+          background: none !important;
+          padding-right: 80px;
+          padding-left: 80px;
+          .brand {
+            font-size: 23px;
+            font-stretch: normal;
+            color: $white;
+            text-transform: uppercase;
+          }
+          .nav-link {
+            font-size: 15px;
+            color: $white;
+          }
+          .sign-in-button {
+            border-radius: 4px;
+            background-color: $gray-color;
+            border: solid 1px $border-gray;
+            width: 100px;
+            height: 44px;
+            color: $white;
+          }
+          .track-nav {
+            .down-arrow {
+              font-size: 18px;
+              padding-top: 5px;
+              padding-left: 5px;
+            }
+          }
+        }
+      }
+      .body {
+        width: 100%;
+        position: relative;
+        top: 80px;
+        margin-bottom: 40px;
+        .image-section {
+          .art {
+            max-height: 400px;
+            min-height: 200px;
+          }
+        }
+        .header-section {
+          .career-track-div {
+            width: 140px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: $lite-black;
+            @include font(13px, 500);
+            text-align: center;
+            color: $white;
+            .label {
+              position: relative;
+              top: 6px;
+            }
+          }
+          .title {
+            @include font(50px, 300);
+            line-height: 1.12;
+            color: $white;
+          }
+          .description {
+            @include font(17px, normal);
+            opacity: 0.8;
+            line-height: 1.56;
+            color: $white;
+          }
+          .button-section {
+            .join-career-track-btn {
+              padding: .75rem 3rem;
+              color: $white;
+              background-color: $primary-btn;
+              .label {
+                @include font(16px, 500);
+              }
+              .right-key-arrow {
+                height: 16px;
+                padding-left: 12px;
+              }
+            }
+          }
+        }
+      }
+      .info-section {
+        top: 30px;
+        position: relative;
+        .body {
+          min-height: 150px;
+          border-radius: 10px;
+          background-color: $white;
+          box-shadow: 0 32px 60px 0 $info-section-shadow;
+          .label-section {
+            margin-top: 40px;
+            .info-label {
+              text-align: center;
+              @include font(32px, 300);
+              color: $profile-nav-tab-inactive
+            }
+            .info-sublabel {
+              text-align: center;
+              @include font(16px, normal);
+              color: $secondary-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .share-link-section {
+    background-color: $app-background;
+    .content {
+      padding-top: 160px;
+      padding-bottom: 35px;
+      .left-section {
+        color: $profile-nav-tab-inactive;
+        font-size: 16px;
+        .heading {
+          font-size: 32px;
+        }
+        .partners-label {          
+          font-weight: 500;
+          color: $profile-content-font
+        }
+      }
+      .right-section {
+        border-radius: 4px;
+        background-color: $white;
+        .label {
+          @include font(16px, 500);
+          color: $profile-content-font;
+        }
+        .social-media-label {
+          font-size: 15px;
+          color: $profile-nav-tab-inactive;
+        }
+        .social-media-icon {
+          height: 24px;
+          width: 30px;
+        }
+        .input-group {
+          .link-copy-box {
+            border-radius: 4px;
+            background-color: $app-background;
+            color: $profile-content-font;
+            border: none !important;
+            max-width: 290px;
+          }
+          .copy-button {
+            background-color: $secondary-btn-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .career-impact-section {
+    background-image: $career-impact-image;
+    .chart-section {
+      color: $white;
+      padding-top: 55px;
+      .heading-section {
+        .heading {
+          @include font(32px, normal);
+          color: $white;
+        }
+        .desc {
+          line-height: 1.63;
+          font-size: 16px;
+          opacity: 0.6;
+        }
+      }
+      .chart-body {
+        background-color: $white;
+        border-radius: 4px;
+        .bar-chart-section {
+          margin: 15px 0px;
+          .recharts-legend-item-text {
+            position: relative;
+            top: 2px;
+            font-size: 14px;
+            color: $profile-nav-tab-inactive;
+          }
+        }
+        .carousel-section {
+          .title {
+            @include font(16px, 500);
+            opacity: 0.9;
+            color: $white;
+          }
+        }
+      }
+    }
+    .slide-common {
+      min-height: 190px !important;
+      max-width: 261px;
+      color: $white !important;
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0 6px 8px 0 $slide-shadow;
+      .slide-content {
+        .header-section {
+          .name {
+            @include font(17px, 500);
+            color: $primary-text-color;
+            text-align: left;
+          }
+          .completed-time {
+            font-size: 14px;
+            color: $secondary-text-color;
+          }
+        }
+        .work-section {
+          &.current {
+            background-color: $app-background;
+          }
+          text-align: left;
+          .label {
+            @include font(14px, 600);
+            color: $secondary-text-color;
+          }
+          .company-name {
+            line-height: 1.14;
+            font-size: 14px;
+            color: $profile-nav-tab-inactive;        
+          }
+          .company-icon {
+            width: 39.1px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+  .student-review-section {
+    background-color: $app-background;
+    .heading {
+      font-size: 32px;
+      color: $profile-nav-tab-inactive;
+    }
+    .rating-section {
+      .star-image {
+        &.hide-star {
+          visibility: hidden;
+        }
+      }
+      .rating-number {
+        @include font(66px, 300);
+        font-family: GTWalsheim;
+        color: $profile-nav-tab-inactive;
+      }
+      .over-all-stars {
+        color: $review-count-color;
+      }
+      .avg-rating-label {
+        font-size: 14px;
+        color: $profile-nav-tab-inactive;
+      }
+      .progress-bar-section {
+        .ratings {
+          max-width: 100px;
+        }
+        .progress {
+          border-radius: 0px !important;
+          max-height: 12px !important;
+          .progress-bar {
+            background-color: $secondary-btn-color !important;
+            max-height: 12px !important;
+          }
+        }
+        .percentage {
+          font-size: 14px;
+          color: $profile-nav-tab-inactive;
+        }
+      }
+    }
+    .review-section {
+      font-size: 14px;
+      .user-detail {
+        &.show-border {
+          border-bottom: 1px solid $review-section-border;
+        }
+        .last-review {
+          opacity: 0.3;
+        }
+        .review {
+          font-size: 15px;
+          line-height: 1.47;
+          color: $profile-nav-tab-inactive;
+        }
+        .name {
+          font-size: 16px;
+          color: $profile-nav-tab-inactive;
+        }
+        .date {       
+          text-align: center;   
+          color: $review-count-color;
+          border-right: 1px solid $review-section-border;
+        }
+        .report {
+          color: $report-abouse-color;
+        }
+      }
+    }
+  }
+  .testimonial-section {
+    .header-section {
+      font-size: 32px;
+      color: $profile-nav-tab-inactive;
+    }
+    .comment-section {
+      .quote-image {
+        width: 36px;
+        height: 30px;
+      }
+      .comment {
+        @include font(24px, 600);
+        line-height: 1.25;
+        color: $profile-nav-tab-inactive;
+      }
+      .carousel-control-prev-icon, .carousel-control-next-icon  {
+        background-image: none;
+      }
+    }
+    .slide-icon {
+      font-size: 41px;
+      color: $profile-email-color !important;
+    }
+    .name {
+      font-size: 17px;
+      color: $profile-nav-tab-inactive;
+    }
+    .company-name {
+      font-size: 15px;
+      color: $profile-content-font;
+    }
+  }
+  .question-section {
+    background-image: $career-impact-image;
+    .content {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      .header {
+        font-size: 32px;
+        color: $white;
+      }
+      .question-div {
+        background-color: $white;
+        .parent {
+          border-bottom: 1px solid $border-color;
+          padding: 30px;
+          border-radius: 4px;
+          .question {
+            font-size: 16px;
+            color: $profile-nav-tab-inactive;
+          }
+          .icon {
+            float: right;
+            font-size: 18px;
+            color: $secondary-text-color;
+          }
+        }
+      }
+    }
+  }
+  .program-syllabus {
+    background-color: $app-background;
+    color: $profile-nav-tab-inactive;
+    .program-syllabus-content {
+      padding: 60px 0px;
+      .profile {
+        max-width: 60px;
+        .profile-image {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .name {
+        font-size: 16px;
+      }
+      .designation {
+        font-size: 15px;
+        color: $profile-content-font;
+        &.published-at {
+          text-align: right;
+        }
+      }
+      .last-element {
+        position: relative;
+      }
+      .first-content {
+        z-index: 20;
+        position: absolute;
+      }
+      .syllabus-section {
+        background-color: $white;
+        border-radius: 4px;
+        box-shadow: 0 5px 20px 0 $pagination-box-shadow;
+        &.second-content {
+          z-index: 19;
+          position: absolute;
+          top: 20px;
+        }
+        &.third-content {
+          z-index: 18;
+          position: relative;
+          top: 40px;
+        }
+        .syllabus-title {
+          font-size: 19px;
+        }
+        .description {
+          font-size: 15px;
+          line-height: 1.33;
+          color: $profile-content-font;
+        }
+      }
+      .verified-section {
+        background-color: $white;
+        .title {
+          @include font(16px, 500);
+          color: $secondary-text-color
+        }
+        .view-all {
+          font-size: 15px;
+          color: $secondary-btn-color
+        }
+      }
+      .view-all-btn {
+        margin-top: 40px;        
+        max-width: 200px;
+        min-height: 44px;
+        border-radius: 4px;
+        background: none;
+        border: solid 1px $secondary-btn-color;
+        color: $secondary-btn-color;
+        font-size: 15px;
+      }
+    }
+  }
+  .program-benefit-section {
+    background-color: $app-background;
+    .content {
+      padding: 100px 0px 10px;
+      .description {
+        font-size: 16px;
+        color: $secondary-text-color;
+        line-height: 1.63;
+      }
+      .content-list {
+        .section-detail {
+          background-color: $white;
+          .benefit-icon {
+            max-width: 70px;
+            max-height: 70px;
+            min-width: 40px;
+            min-height: 40px;
+          }
+          .title {
+            font-size: 19px;
+            color: $profile-nav-tab-inactive;
+          }
+          .description {
+            font-size: 15px;
+            line-height: 1.33;
+            color: $profile-content-font;
+            min-height: 55px;
+          }
+        }
+      }
+    }
+  }
+  .limitless-section {
+    background: url('../../images/pattern.svg') left, $limitless-section-background;
+    background-repeat: no-repeat;
+    .content {
+      padding: 60px 0px;
+      .header {
+        @include font(32px, 300);
+        line-height: 1.13;
+        color: $white;
+      }
+      .description {
+        font-size: 17px;
+        line-height: 1.47;
+        color: $white;
+      }
+      .start-learning-button {
+        border-radius: 4px;
+        background-color: $dark-btn-color;
+        color: $white;
+        min-height: 50px;
+        max-width: 250px;
+      }
+    }
+  }
+  .side-nav-section {
+    background-image: $overview-Background;
+    border-radius: 4px;
+    max-width: 250px;
+    position: sticky;
+    margin-top: 45px;
+    left: 20px;
+    top: 70px;
+    float: left;
+    left: 40px;
+    margin-bottom: 0px;
+    z-index: 2;
+    font-size: 15px;
+    .nav-bars {
+      .nav-content {
+        min-height: 50px;
+        align-items: center;
+        &.active {
+          background-color: $secondary-btn-color;
+          color: $white !important;
+        }
+        .label {
+          color: $white;
+          opacity: 0.7;
+          padding-left: 25px;
+        }
+        .left-arrow {
+          font-size: 21px;
+          margin-top: 3px;
+          color: $white;
+        }
+      }
+      .join-content {
+        min-height: 50px;
+        background-color: $primary-btn;
+        align-items: center;
+        .label {
+          color: $white;
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+}
+

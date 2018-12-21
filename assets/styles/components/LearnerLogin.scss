@@ -1,0 +1,259 @@
+@import '../variables.scss';
+
+.navbar-toggler{
+  background-color: $white;
+}
+.droplets {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  nav{
+    .sign-btn{
+      background-color: $gray-color;
+      border: solid 1px $border-gray;
+      color: $white;
+      padding: 10px 25px;
+    }
+    width: 100%;
+    ul{
+      background: $dark-blue !important;
+      color: $white;
+      li{
+        line-height: 45px;
+      }
+    }
+  }
+  p{
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.56;
+    color: $white;
+  }
+  .header-btns{
+    display: inherit;
+    list-style: none;
+    position: absolute;
+    right: 120px;
+    li{
+      padding: 10px 20px;
+      color: $white;
+      line-height: 45px;
+    }
+  }
+  .login-left-panel{
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.14;
+    color: $white;
+    padding-bottom: 30px;
+  }
+  .login-left{
+    padding: 0px 70px;
+  }
+  .login-right{
+    padding: 0px 20px 25px 20px;
+    margin: 0 auto;
+  }
+  .learner-login-panel{
+    background-color: $white;
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+    .close-signin-popup {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .invalid-credential{
+      margin: 0px 15px;
+      border: 1px solid $error-color_1;
+      border-radius: 4px;
+      padding: 7px;
+      background-color: rgba(255, 73, 72, 0.07);
+    }
+    .form-control{
+      margin: 10px 0px;
+      height: 48px;
+      border-radius: 4px;
+      background-color: $white;
+      border: solid 1px $border-color;
+      &.is-valid {
+        border: solid 1px $primary-btn;
+      }
+      &.is-invalid {
+        border: solid 1px $error-color_1;
+      }
+    }
+    .login-panel-title{
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      color: $thin-black;
+      margin: 0px;
+    }
+    .account-exists{
+      font-size: 15px;
+      color: $subtle-text;
+      text-align: center;
+      &.signup-terms {
+        text-align: left;
+      }
+      u{
+        color: $secondary-btn-color;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}
+
+.bottom{
+  padding: 0px 100px;
+}
+.bottom-about {
+  &.course-page {
+    background-color: $dark-btn-color !important;
+  }
+  background-color: $dark-blue;
+  .app-about, .app-about-table{
+    padding: 55px 0px 0px 0px;
+    color: $white;
+    p{
+      opacity: 0.6;
+      font-size: 15px;
+      line-height: 1.53;
+      color: $white;
+      max-width: 280px;
+    }
+  }
+  .app-about-table{
+    padding: 55px 0px 35px 0px;
+  }
+  .bottom-table-content{
+    font-size: 15px;
+    opacity: 0.5;
+    padding: 15px 15px 0px 15px;
+  }
+  .course-page-heading {
+    font-size: 23px;
+    font-weight: 600;
+    color: $white !important;
+  }
+}
+
+.bottom-footer{
+  opacity: 0.25;
+  color: $white;
+  justify-content: space-between;
+  border-top: solid 1px $footer-border-color;
+  padding: 0px;
+  ul{
+    label{
+      padding: 20px;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+.designedBy{
+  margin: 0px;
+  line-height: 50px;
+}
+.bottom-btns{
+  list-style: none;
+  display: inherit;
+  li{
+    padding: 10px;
+    color: $white;
+  }
+}
+
+.learner-login-popup {
+  .modal-dialog {
+    max-width: 510px;
+    .loadingOverlay {
+      background: none;
+    }
+  }
+}
+
+.bottom-footer{
+  .navbar{
+    .show{
+      height: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .split-content{
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header-btns{
+    li{
+      line-height: 20px !important;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .bottom{
+    padding: 0px;
+  }
+  .header-btns{
+    right: 10px !important;
+  }
+  .sign-btn{
+    padding: 0.375rem 0.75rem !important;
+  }
+  .login-panel-title{
+    font-size: 20px;
+  }
+  .droplets{
+    background-size: 140% 100% !important;
+    .login-panel-title{
+      font-size: 20px;
+    }
+    p{
+      font-size: 13px;
+    }
+    .login-left-panel{
+      font-size: 25px;
+    }
+    .login-left{
+      padding: 0px 30px !important;
+    }
+  }
+  .artwork, .tools{
+    height: 300px;
+  }
+  .tools-analytics-content{
+    padding: 20px !important;
+    top: 0px !important;
+    strong{
+      font-size: 25px !important;
+      display: block;
+      width: 50%;
+    }
+    p{
+      font-size: 13px !important;
+      width: 50%;
+    }
+  }
+  .app-about, .app-about-table{
+    padding: 30px !important;
+    p{
+      max-width: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-custom-style {
+    padding-right: 0px !important;
+  }
+}

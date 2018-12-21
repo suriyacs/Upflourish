@@ -1,0 +1,52 @@
+@import '../variables.scss';
+
+.pagination-container {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	color: $primary-text-color;
+	.pagination-button {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		background-color: $white;
+		padding: 0 20px;
+		cursor: pointer;
+		i {
+			margin: 0;
+		}
+		&.disabled {
+			cursor: auto;
+			color: rgba($color: $primary-text-color, $alpha: 0.7)
+		}
+	}
+	.first-page, .last-page {
+		border-radius: 3px;
+		margin: 0 5px;
+	}
+	.previous-page {
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+	.current-page {
+		border-left: none;
+		border-right: none;
+		background-color: $secondary-btn-color;
+		color: $white;
+	}
+	.next-page {
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+  .pagination-container {
+    .pagination-button {
+      height: 35px;
+      padding: 0 16px;
+    }
+  }
+}

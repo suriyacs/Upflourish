@@ -1,0 +1,55 @@
+@import '../variables.scss';
+
+.goal-container {
+    background-color: $white;
+    max-width: 550px;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: $primary-text-color;
+    p{
+        color: $secondary-text-color;
+    }
+}
+.goal-detail{
+    border: 2px solid $border-color;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 15px 0px;
+    cursor: pointer;
+    span{
+        font-size: 17px;
+    }
+    .checkbox{
+        margin: 0 auto;
+        position: inherit;
+        top: 35%;
+        height: 20px;
+    }
+}
+.active-goal{
+    border: 2px solid $secondary-btn-color;
+}
+.goal-title{
+    font-size: 24px;
+}
+input[type='radio'] {
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    border:1px solid $secondary-btn-color;
+    border-radius:75%;
+    outline:none;
+}
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:60%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:75%;    
+}
+input[type='radio']:checked:before {
+  background:$secondary-btn-color;
+}

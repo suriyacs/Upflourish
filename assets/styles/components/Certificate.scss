@@ -1,0 +1,182 @@
+@import '../variables.scss';
+
+@mixin default-font-style {
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@mixin default-font {
+  font-family: CircularStd;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: -0.6px;
+  color: $white;
+  font-weight: normal;
+  @include default-font-style;
+}
+
+.certificate {
+  background-image: $gradient-thin-blue;
+  min-height: calc(100vh - 70px);
+  &.share {
+    min-height: calc(100vh - 0px);
+  }
+  .download-section {
+    .trophy-image-section {
+      .trophy-icon {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .congrats-text {
+      @include default-font;
+    }
+    .download-btn-section {
+      .download-btn {
+        width: 100%;
+        min-height: 50px;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px 0 $black-shadow;
+        background-color: $white;
+        text-decoration: none !important;
+        border: none;
+        .label {
+          font-family: CircularStd;
+          font-size: 14px;
+          font-weight: 500;
+          @include default-font-style;
+          line-height: normal;
+          letter-spacing: -0.2px;
+          text-align: center;
+          color: $secondary-btn-color;
+        }
+        .download-icon {
+          width: 27px;
+          height: 23px;
+        }
+      }
+    }
+    .take-me-home {
+      @include default-font;
+      font-size: 16px;
+      color: $white !important;
+      text-decoration: underline;
+    }
+    .share-section {
+      .share-text {
+        opacity: 0.7;
+        font-family: CircularStd;
+        font-size: 14px;
+        font-weight: 500;
+        @include default-font-style;
+        line-height: normal;
+        letter-spacing: -0.4px;
+        color: $white;
+      }
+    }
+    .link-section {
+      .copy-indicator {
+        text-align: right;
+        font-size: 11px;
+        color: #fff;
+        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+            animation: fadein 2s;
+      }
+      @keyframes fadein {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+      }
+      
+      /* Firefox < 16 */
+      @-moz-keyframes fadein {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+      }
+      
+      /* Safari, Chrome and Opera > 12.1 */
+      @-webkit-keyframes fadein {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+      }
+      
+      /* Internet Explorer */
+      @-ms-keyframes fadein {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+      }
+      
+      .link-outer {
+        width: 100%;
+        min-height: 50px;
+        border-radius: 4px;
+        background-color: #3e4fc6;
+        .link {
+          opacity: 1.8;
+          font-family: FaktPro;
+          font-size: 15px;
+          @extend %textStyles;
+          color: $white;
+          max-width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          a {
+            color: $white !important;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .certificate-section {
+    background-color: white;
+    .certificate-image {
+      height: 100%;
+      width: 100%
+    }
+  }
+  .error-section {
+    .error {
+      &.invalid-token-error {
+        padding-top: 20%;
+      }
+      @include default-font;
+      text-align: center;
+    }
+  }
+}
+.pass-phrase-modal {
+  .heading {
+    min-height: 50px;
+    border-bottom: 1px solid $profile-popup-border;
+    .title {
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .admin {
+      text-align: right;
+    }
+  }
+  .modal-footer {
+    border: none;
+    .save-btn {
+      background-color: $primary-btn;
+      border-radius: 4px;
+      border: solid 1px $primary-btn;
+      font-weight: bold;
+      font-size: 15px;
+      min-width: 90px;
+      color: $white;
+      &.verify-transaction {
+        min-height: 40px;
+        text-align: center;
+        padding: 8px;
+        color: $white !important;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}

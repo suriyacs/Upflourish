@@ -1,0 +1,23 @@
+version: '2'
+services:
+  dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    command: yarn dev
+    ports:
+      - "8081:8081"
+    env_file: .dev.env
+    volumes:
+      - ./:/ag-blockline-web
+
+  prod:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    command: yarn build
+    ports:
+      - "8081:8081"
+    env_file: .prod.env
+    volumes:
+      - ./:/ag-blockline-web

@@ -1,0 +1,435 @@
+@import '../variables.scss';
+
+.landing-container {
+  background-color: $app-background;
+  .landing-header{
+    background-image: url('../../images/landing.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    #navbarHeaderContent {
+      display: none;
+    }
+    .collapse.show {
+      display: block !important;
+    }
+    .landing-content{
+      z-index: 1;
+      width: 100%;
+    }
+    .app-header{
+      padding-left: 3rem;
+    }
+    .header-content {
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .dropdown {
+        list-style: none;
+        color: $white;
+        &:hover>.dropdown-menu {
+          display: block;
+          margin-top: 0;
+        }
+        .dropdown-menu {
+          display: none;
+        }
+      }
+      .dropdown>.dropdown-open:active {
+        pointer-events: none;
+      }
+      .search-course {
+        input{
+          border-radius: 4px;
+          background-color: $section-header-color;
+          border: none;
+          color: $white;
+          &::placeholder{
+            opacity: 0.6;
+            color: $white;
+          }
+        }
+        .search-icon{
+          height: 20px;
+          position: relative;
+          display: block;
+          bottom: 28px;
+          left: 15px;
+        }
+      }
+    }
+    .header-btns{
+      display: inherit;
+      list-style: none;
+      font-size: 15px;
+      li{
+        padding: 10px 0px;
+        color: $white;
+        line-height: 45px;
+        margin: 0px 15px;
+      }
+      .signin-btn, .signup-btn{
+        background-color: $gray-color;
+        border: solid 1px $border-gray;
+        color: $white;
+        padding: 10px 20px;
+      }
+      .signup-btn {
+        background-color: $secondary-btn-color;
+        border: solid 1px $secondary-btn-color;
+      }
+    }
+    .content{
+      padding: 30px 0px 0px 60px;
+      max-width: 600px;
+      color: $white;
+      min-height: 550px;
+      position: relative;
+      top: 100px;
+      .job-title{
+        font-size: 50px;
+        font-weight: 300;
+        line-height: 1.12;
+      }
+      p{
+        opacity: 0.8;
+        line-height: 1.47;
+        font-size: 19px;
+      }
+      .search-icon{
+        height: 20px;
+        position: relative;
+        display: block;
+        bottom: 30px;
+        float: right;
+        right: 15px;
+      }
+    }
+  }
+  .top-learningpaths{
+    min-height: 500px;
+    padding: 0px 50px 40px 50px;
+    margin-top: -150px;
+    .active-category {
+      color: $secondary-btn-color;
+    }
+    .see-all-category{
+      background-color: $secondary-btn-color;
+      color: $white;
+      border-radius: 50px;
+      padding: 0px .5rem;
+    }
+    .header-title{
+      color: $thin-black;
+      font-size: 27px;
+      font-weight: 500;
+    }
+    li{
+      padding: 5px 10px;
+      color: $profile-nav-tab-inactive;
+      line-height: 20px;
+      font-size: 15px;
+      margin: 0px 10px;
+    }
+    li.active{
+      color: $secondary-btn-color;
+      font-weight: bold;
+    }
+    .card-label {
+      right: 25px;
+      top: 25px;
+    }
+    .navbar-nav {
+      overflow-x: auto;
+    }
+  }
+  .comments{
+    min-height: 450px;
+    background-color: $white;
+    .commenter{
+      background: url(../../images/learner.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .details {
+      color: $thin-black;
+      position: relative;
+      top: 30%;
+      left: 10px;
+      max-width: 90%;
+      p{
+        font-size: 22px;
+        font-style: italic;
+        line-height: 1.45;
+        font-weight: 900;
+      }
+      .commenter-name{
+        font-size: 16px;
+      }
+      .commenter-designation{
+        font-size: 15px;
+        color: $subtle-text;
+      }
+    }
+  }
+  .learningpaths{
+    min-height: 500px;
+    padding: 40px 80px;
+    .title{
+      font-size: 30px;
+      color: $thin-black;
+      font-weight: 500;
+    }
+    .description {
+      font-size: 17px;
+      color: $subtle-text;
+    }
+    .paths{
+      color: $white;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.18;
+      a{
+        color: $white;
+        text-decoration: none;
+      }&:hover{
+        text-decoration: none;
+      }
+      p{
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        right: 10%;
+        z-index: 1;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.33;
+        text-align: center;
+      }
+    }
+    .show-more-paths{
+      font-size: 15px;
+      color: $secondary-btn-color;
+    }
+  }
+  .bottom-about {
+    &.course-page {
+      background-color: $primary-text-color !important;
+    }
+    background-color: $primary-text-color;
+    .app-about, .app-about-table{
+      padding: 55px 0px 0px 0px;
+      color: $white;
+      p{
+        opacity: 0.6;
+        font-size: 15px;
+        line-height: 1.53;
+        color: $white;
+        max-width: 280px;
+      }
+    }
+    .app-about-table{
+      padding: 55px 0px 35px 0px;
+    }
+    .bottom-table-content{
+      font-size: 15px;
+      opacity: 0.5;
+      padding: 15px 15px 0px 15px;
+    }
+    .course-page-heading {
+      font-size: 23px;
+      font-weight: 600;
+      color: $white !important;
+    }
+    .app-name{
+      -webkit-text-fill-color: $white;
+      font-size: 32px;
+    }
+  }
+  .bottom{
+    padding: 0px 100px;
+  }
+  .bottom-image {
+    opacity: 0.6;
+  }
+  .bottom-footer{
+    opacity: 0.25;
+    color: $white;
+    border-top: solid 1px $footer-border-color;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    ul{
+      label{
+        padding: 20px;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  .designedBy{
+    margin: 0px;
+    line-height: 50px;
+  }
+  .bottom-btns{
+    list-style: none;
+    display: inherit;
+    li{
+      padding: 10px;
+      color: $white;
+    }
+  }
+  .bottom-footer{
+    .navbar{
+      .show{
+        height: 100% !important;
+      }
+    }
+  }
+  .container-fluid{
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  .d-none {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .commenter, .commenter-content{
+    min-height: 400px !important;
+  }
+}
+.explore-all {
+  border-radius: 4px;
+  border: solid 1px $secondary-btn-color;
+  background-color: $gray-color;
+  color: $secondary-btn-color;
+  padding: .5rem 1.75rem;
+}
+
+.recommendation-course {
+  background-color: $white;
+  background-image: url('../../images/recommendations.svg');
+  background-repeat: no-repeat;
+  height: 450px;
+  background-position: right bottom;
+  align-items: center;
+  display: flex;
+  .recommendation-content {
+    max-width: 800px;
+    .title {
+      font-size: 27px;
+      font-weight: 500;
+      color: $thin-black;
+    }
+    .description {
+      font-size: 17px;
+      line-height: 1.53;
+      color: $subtle-text;
+    }
+    .recommendation-btn {
+      border-radius: 4px;
+      border: solid 1px $secondary-btn-color;
+      background-color: $secondary-btn-color;
+      color: $white;
+      padding: .5rem 1.75rem;
+    }
+  }
+}
+.whichCourseToTake {
+  border-radius: 4px;
+  background-image: linear-gradient(325deg, $dark-blue-color, $light-blue-color);
+  max-width: 400px;
+  color: $white;
+  position: fixed;
+  bottom: 10px;
+  z-index: 999;
+  right: 10px;
+  transition: 0.3s;
+  text-decoration: none;
+  .open-arrow {
+    font-size: 25px;
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    background-color: $light-blue-color;
+    border-radius: 4px;
+  }
+  .close-arrow {
+    font-size: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: 0px;
+    padding: 0px 10px;
+    z-index: 9999;
+  }
+  .title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .description {
+    opacity: 0.7;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  .recommendation-btn {
+    border-radius: 4px;
+    border: solid 1px $gray-bg;
+    background-color: $gray-bg;
+    color: $white;
+  }
+}
+.close-recommend-popup {
+  right: -400px;
+}
+
+.primaryCareerGoal {
+  min-height: 430px;
+  border-radius: 6px;
+  box-shadow: 0 30px 50px 0 rgba(101, 115, 131, 0.2);
+  background-color: $white;
+  position: relative;
+  top: -210px;
+  min-width: 400px;
+  max-width: 750px;
+  margin: 0 auto;
+  a:hover {
+    text-decoration: none;
+  }
+  .description {
+    font-size: 17px;
+    line-height: 1.29;
+    color: $secondary-text-color;
+  }
+  .title {
+    color: $primary-text-color;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.83;
+    letter-spacing: normal;
+  }
+  .card {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    border: solid 1px $border-color;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    img {
+      position: relative;
+      top: 25px;
+    }
+    p {
+      color: $secondary-text-color;
+      font-size: 16px;
+      line-height: 1.19;
+      margin: 0;
+      padding-top: 15px;
+    }
+  }
+}
